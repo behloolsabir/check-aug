@@ -1,6 +1,7 @@
 # System Design
 
 ## Model Development
+---
 
 ### Data Prep 
 We can use data augmentation method used in the coding assignment to generate compliance positive and compliance negative cases. We can use other sentences from any chat data for Non-compliance data (it might bring in some noise of compliance data but if enough data is used it wont be a problem)
@@ -16,6 +17,7 @@ We can design two styles of model:
 2. Three class classification. Non-compliance topic, positive compliance and negative compliance. 
 
 ## User Feedback System
+---
 User feedback can be collected at two levels. Compliance discussed or no and sentiment positive or negative. 
 This feedback can then be used to fine-tune our models. 
 
@@ -24,4 +26,5 @@ On crossing certain threshold of data drift, we can do the fine-tune of our mode
 On crossing certain threshold of concept drift, we have reassess the labels we were initially preparing. 
 
 ## Interpretability 
+---
 We can use post-hoc model agnostic local surrogate models to find out the responsible words in the sentence which contributed to the output. We can try ELI5/LIME for the same. The top words can be highlighted in the output for officer's review. 
